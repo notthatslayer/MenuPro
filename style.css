@@ -1,0 +1,157 @@
+:root {
+  --color-primary: #e11d48;
+  --color-primary-contrast: #ffffff;
+  --color-bg: #fff8fa;
+  --color-surface: #ffffff;
+  --color-text: #2d1b24;
+  --color-muted: #856b75;
+  --color-border: #f2dbe3;
+  --color-accent: #fce7f3;
+  --color-success: #16805b;
+  --color-warning: #b7791f;
+  --color-danger: #c53030;
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+.dark-mode {
+  --color-bg: #21141b;
+  --color-surface: #2e1d26;
+  --color-text: #fff5f8;
+  --color-muted: #cdb4be;
+  --color-border: #513642;
+  --color-accent: #482334;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.nav-active {
+  background: var(--color-accent);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.nav-active svg {
+  stroke: var(--color-primary);
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-primary-contrast);
+  border-radius: 12px;
+}
+
+.btn-primary:hover {
+  filter: brightness(.94);
+}
+
+.btn-soft {
+  background: var(--color-accent);
+  color: var(--color-primary);
+  border-radius: 12px;
+}
+
+.field {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  border-radius: 10px;
+  outline: none;
+}
+
+.field:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px var(--color-accent);
+}
+
+.badge {
+  border-radius: 999px;
+  padding: 4px 9px;
+  font-size: 11px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.bar {
+  background: var(--color-primary);
+  border-radius: 6px 6px 0 0;
+  min-height: 8px;
+}
+
+.sidebar-scroll {
+  scrollbar-width: thin;
+}
+
+@media (max-width: 767px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .content {
+    margin-left: 0 !important;
+  }
+}
+
+@media print {
+  .no-print,
+  aside,
+  header,
+  .toast,
+  .modal-backdrop {
+    display: none !important;
+  }
+
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .report-print {
+    display: block !important;
+  }
+}
